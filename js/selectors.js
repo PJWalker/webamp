@@ -80,7 +80,7 @@ export const getRunningTimeMessage = createSelector(
     `${getTimeStr(selectedRunningTime)}/${getTimeStr(totalRunningTime)}`
 );
 
-// TODO: use slectors to get memoization
+// TODO: use selectors to get memoization
 export const getCurrentTrackIndex = state =>
   state.playlist.trackOrder.indexOf(state.playlist.currentTrack);
 
@@ -128,7 +128,7 @@ export const getNumberOfVisibleTracks = state => {
   const playlistSize = getWindowSize(state, "playlist");
   return Math.floor(
     (BASE_WINDOW_HEIGHT + WINDOW_RESIZE_SEGMENT_HEIGHT * playlistSize[1]) /
-      TRACK_HEIGHT
+    TRACK_HEIGHT
   );
 };
 
@@ -152,7 +152,7 @@ export const getPlaylistScrollPosition = createSelector(
     return Math.round(
       (Math.round((overflowTrackCount * playlistScrollPosition) / 100) /
         overflowTrackCount) *
-        100
+      100
     );
   }
 );
@@ -216,7 +216,7 @@ export const getMediaText = createSelector(
     minimalMediaText == null
       ? null
       : // TODO: Maybe the `  ***  ` should actually be added by the marquee
-        `${minimalMediaText} (${getTimeStr(duration)})  ***  `
+      `${minimalMediaText} (${getTimeStr(duration)})  ***  `
 );
 
 export const getNumberOfTracks = state => getTrackOrder(state).length;

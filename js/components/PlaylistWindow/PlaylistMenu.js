@@ -58,7 +58,7 @@ export default class PlaylistMenu extends React.Component {
     const handleClickOut = ee => {
       // If the click is _not_ inside the menu.
       if (!target.contains(ee.target)) {
-        // If we've clicked on a Context Menu spawed inside this menu, it will
+        // If we've clicked on a Context Menu spawned inside this menu, it will
         // register as an external click. However, hiding the menu will remove
         // the Context Menu from the DOM. Therefore, we wait until the next
         // event loop to actually hide ourselves.

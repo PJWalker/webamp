@@ -33,10 +33,10 @@ class MilkdropWindow extends React.Component {
         const butterchurnMinimalPresets = require("butterchurn-presets/lib/butterchurnPresetsMinimal.min");
         const presetPackMeta = require("butterchurn-presets/lib/butterchurnPresetPackMeta.min");
         this.presets = butterchurnMinimalPresets.getPresets();
-        this.minmalPresetKeys = Object.keys(this.presets);
+        this.minimalPresetKeys = Object.keys(this.presets);
         this.presetKeys = presetPackMeta.getMainPresetMeta().presets;
-        const presetKey = this.minmalPresetKeys[
-          Math.floor(Math.random() * this.minmalPresetKeys.length)
+        const presetKey = this.minimalPresetKeys[
+          Math.floor(Math.random() * this.minimalPresetKeys.length)
         ];
 
         this.visualizer = butterchurn.createVisualizer(
@@ -130,7 +130,7 @@ class MilkdropWindow extends React.Component {
     }
     this.setState({ isFullscreen: screenfull.isFullscreen });
   }
-  _handleRequestFullsceen() {
+  _handleRequestFullscreen() {
     if (screenfull.enabled) {
       if (!screenfull.isFullscreen) {
         screenfull.request(this._wrapperNode);
@@ -260,7 +260,7 @@ class MilkdropWindow extends React.Component {
         }}
         tabIndex="0"
         ref={node => (this._wrapperNode = node)}
-        onDoubleClick={() => this._handleRequestFullsceen()}
+        onDoubleClick={() => this._handleRequestFullscreen()}
       >
         {this.state.presetOverlay && (
           <PresetOverlay

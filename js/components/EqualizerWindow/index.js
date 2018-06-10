@@ -88,7 +88,7 @@ EqualizerWindow.propTypes = {
   shade: PropTypes.bool.isRequired
 };
 
-// This does not use the shorthand object syntax becuase `setHertzValue` needs
+// This does not use the shorthand object syntax because `setHertzValue` needs
 // to return a function.
 const mapDispatchToProps = dispatch => ({
   focusWindow: () =>

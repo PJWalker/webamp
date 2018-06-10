@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ContextMenu } from "./ContextMenu";
 
-export default class ContextMenuWraper extends React.Component {
+export default class ContextMenuWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ export default class ContextMenuWraper extends React.Component {
       offsetTop: pageY,
       offsetLeft: pageX
     });
-    // Even if you right click multiple times before closeing,
+    // Even if you right click multiple times before closing,
     // we should only end up with one global listener.
     document.addEventListener("click", this._handleGlobalClick);
     e.preventDefault();
@@ -60,7 +60,7 @@ export default class ContextMenuWraper extends React.Component {
   }
 }
 
-ContextMenuWraper.propTypes = {
+ContextMenuWrapper.propTypes = {
   children: PropTypes.any.isRequired,
   renderContents: PropTypes.func.isRequired
 };

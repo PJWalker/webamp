@@ -12,7 +12,7 @@ import {
 const defaultWindowsState = {
   focused: WINDOWS.MAIN,
   genWindows: {
-    // TODO: Remove static capabilites and derive them from ids/generic
+    // TODO: Remove static capabilities and derive them from ids/generic
     main: {
       title: "Main Window",
       size: [0, 0],

@@ -37,7 +37,7 @@ export default function(dispatch) {
       switch (e.keyCode) {
         case 68: // CTRL+D
           dispatch(toggleDoubleSizeMode());
-          e.preventDefault(); // Supress the "Bookmark" action on windows.
+          e.preventDefault(); // Suppress the "Bookmark" action on windows.
           break;
         case 76: // CTRL+L FIXME
           break;

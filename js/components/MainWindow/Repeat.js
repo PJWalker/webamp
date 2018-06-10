@@ -2,11 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { toggleRepeat } from "../../actionCreators";
-import ContextMenuWraper from "../ContextMenuWrapper";
+import ContextMenuWrapper from "../ContextMenuWrapper";
 import { Node } from "../ContextMenu";
 
 const Repeat = ({ repeat, handleClick }) => (
-  <ContextMenuWraper
+  <ContextMenuWrapper
     renderContents={() => (
       <Node
         checked={repeat}
@@ -22,7 +22,7 @@ const Repeat = ({ repeat, handleClick }) => (
       onClick={handleClick}
       title="Toggle Repeat"
     />
-  </ContextMenuWraper>
+  </ContextMenuWrapper>
 );
 
 const mapStateToProps = state => ({

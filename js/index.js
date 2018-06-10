@@ -38,15 +38,15 @@ const NOISY_ACTION_TYPES = new Set([
   SET_BAND_VALUE
 ]);
 
-function supressDragAndDrop(e) {
+function suppressDragAndDrop(e) {
   e.preventDefault();
   e.dataTransfer.effectAllowed = "none";
   e.dataTransfer.dropEffect = "none";
 }
 
-window.addEventListener("dragenter", supressDragAndDrop);
-window.addEventListener("dragover", supressDragAndDrop);
-window.addEventListener("drop", supressDragAndDrop);
+window.addEventListener("dragenter", suppressDragAndDrop);
+window.addEventListener("dragover", suppressDragAndDrop);
+window.addEventListener("drop", suppressDragAndDrop);
 
 let lastActionType = null;
 

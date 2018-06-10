@@ -71,7 +71,7 @@ class WindowManager extends React.Component {
       });
       this.props.updateWindowPositions(windowPositions);
     } else {
-      // A layout has been suplied. We will compute the bounding box and
+      // A layout has been supplied. We will compute the bounding box and
       // center the given layout.
       const info = this.props.windowsInfo;
       const bounding = info.reduce(

@@ -15,7 +15,7 @@ export const overlapX = (a, b) =>
 export const overlapY = (a, b) =>
   top(a) <= bottom(b) + SNAP_DISTANCE && top(b) <= bottom(a) + SNAP_DISTANCE;
 
-// Give a new position for `boxA` that snaps it to `boxB` if neede.
+// Give a new position for `boxA` that snaps it to `boxB` if needed.
 export const snap = (boxA, boxB) => {
   let x, y;
 

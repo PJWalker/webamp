@@ -21,7 +21,7 @@ import { applyDiff } from "../snapUtils";
 // the existing edge relationship.
 //
 // Works by checking the edges before the action is dispatched. Then,
-// after disatching, calculating what position change would be required
+// after dispatching, calculating what position change would be required
 // to restore those relationships.
 function withWindowGraphIntegrity(action) {
   return (dispatch, getState) => {

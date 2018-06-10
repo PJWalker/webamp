@@ -2,11 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { toggleShuffle } from "../../actionCreators";
-import ContextMenuWraper from "../ContextMenuWrapper";
+import ContextMenuWrapper from "../ContextMenuWrapper";
 import { Node } from "../ContextMenu";
 
 const Shuffle = ({ shuffle, handleClick }) => (
-  <ContextMenuWraper
+  <ContextMenuWrapper
     renderContents={() => (
       <Node
         checked={shuffle}
@@ -22,7 +22,7 @@ const Shuffle = ({ shuffle, handleClick }) => (
       onClick={handleClick}
       title="Toggle Shuffle"
     />
-  </ContextMenuWraper>
+  </ContextMenuWrapper>
 );
 const mapStateToProps = state => ({
   shuffle: state.media.shuffle

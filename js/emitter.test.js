@@ -31,7 +31,7 @@ describe("Emitter", () => {
     emitter.trigger("some-event");
     expect(mock).toHaveBeenCalledTimes(1);
   });
-  it("subscriptions do not take effent until the next event", () => {
+  it("subscriptions do not take effect until the next event", () => {
     const mock = jest.fn();
     const emitter = new Emitter();
     emitter.on("some-event", () => {

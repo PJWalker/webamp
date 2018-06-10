@@ -7,7 +7,7 @@ export default class DropTarget extends React.Component {
     this._ref = this._ref.bind(this);
   }
 
-  supress(e) {
+  suppress(e) {
     e.stopPropagation();
     e.preventDefault();
     e.dataTransfer.dropEffect = "link";
@@ -15,7 +15,7 @@ export default class DropTarget extends React.Component {
   }
 
   handleDrop(e) {
-    this.supress(e);
+    this.suppress(e);
     if (!this._node) {
       return;
     }
@@ -38,9 +38,9 @@ export default class DropTarget extends React.Component {
     return (
       <div
         {...passThroughProps}
-        onDragStart={this.supress}
-        onDragEnter={this.supress}
-        onDragOver={this.supress}
+        onDragStart={this.suppress}
+        onDragEnter={this.suppress}
+        onDragOver={this.suppress}
         onDrop={this.handleDrop}
         ref={this._ref}
       />
